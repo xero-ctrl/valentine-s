@@ -27,3 +27,7 @@ function createHeart() {
 
 // Generate hearts every 500ms
 setInterval(createHeart, 500);
+window.onload = function () {
+    let audio = document.getElementById("loveSong");
+    audio.src = "untouchable.mp3?v=" + new Date().getTime();
+};
