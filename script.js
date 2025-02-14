@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let audio = document.getElementById("loveSong");
     let playPauseBtn = document.getElementById("playPauseBtn");
+    let muteBtn = document.getElementById("muteBtn");
     let volumeSlider = document.getElementById("volumeSlider");
 
     // Ensure the latest version of the audio file loads
@@ -22,9 +23,22 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // Mute/Unmute button logic
+    muteBtn.addEventListener("click", function () {
+        audio.muted = !audio.muted; // Toggle mute
+        muteBtn.textContent = audio.muted ? "🔇 Unmute" : "🔊 Mute";
+    });
+
     // Volume control
     volumeSlider.addEventListener("input", function () {
         audio.volume = volumeSlider.value;
+        if (audio.volume === 0) {
+            audio.muted = true;
+            muteBtn.textContent = "🔇 Unmute";
+        } else {
+            audio.muted = false;
+            muteBtn.textContent = "🔊 Mute";
+        }
     });
 });
 
