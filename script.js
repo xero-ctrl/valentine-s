@@ -31,3 +31,23 @@ window.onload = function () {
     let audio = document.getElementById("loveSong");
     audio.src = "iyok.ogg?v=" + new Date().getTime();
 };
+document.addEventListener("DOMContentLoaded", function () {
+    let audio = document.getElementById("loveSong");
+
+    // Try to play the audio
+    audio.play().catch(error => {
+        console.log("Autoplay blocked. User interaction needed.");
+    });
+
+    // Add a button to manually start audio
+    let playButton = document.createElement("button");
+    playButton.textContent = "Play Music";
+    playButton.style.position = "fixed";
+    playButton.style.top = "10px";
+    playButton.style.left = "10px";
+    document.body.appendChild(playButton);
+
+    playButton.addEventListener("click", function () {
+        audio.play();
+    });
+});
