@@ -8,10 +8,14 @@
 </head>
 <body>
 
-    <audio id="loveSong" loop>
-        <source src="iyok.ogg" type="audio/ogg">
+    <div class="custom-audio-player">
+    <button id="playPauseBtn">❤️ Play</button>
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
+</div>
+
+<audio id="loveSong" loop>
+    <source src="iyok.ogg" type="audio/ogg">
 </audio>
-    </audio>
 
     <div class="hearts-container"></div> <!-- Floating hearts -->
 
