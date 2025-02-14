@@ -51,3 +51,22 @@ document.addEventListener("DOMContentLoaded", function () {
         audio.play();
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    let audio = document.getElementById("loveSong");
+    let playPauseBtn = document.getElementById("playPauseBtn");
+    let volumeSlider = document.getElementById("volumeSlider");
+
+    playPauseBtn.addEventListener("click", function () {
+        if (audio.paused) {
+            audio.play();
+            playPauseBtn.textContent = "💖 Pause";
+        } else {
+            audio.pause();
+            playPauseBtn.textContent = "❤️ Play";
+        }
+    });
+
+    volumeSlider.addEventListener("input", function () {
+        audio.volume = volumeSlider.value;
+    });
+});
