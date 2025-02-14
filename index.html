@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>valentine's card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <audio id="loveSong" loop>
+        <source src="untouchable.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="hearts-container"></div> <!-- Floating hearts -->
+
+    <div class="card">
+        <div class="front">
+            <h1>For My Baby</h1>
+            <button onclick="openCard()">Open</button>
+        </div>
+        <div class="inside">
+            <h2>Happy Valentine's Day!</h2>
+            <img id="image" src="cutie.jpg">
+            <p id="message">
+                happy valentine's to the most beautiful girl in the whole world. i may not be rich but i have the most valuable thing in life, that is your love for me. please listen to the song until the end (⁠｡⁠･⁠ω⁠･⁠｡⁠)⁠ﾉ⁠♡
+                <br>
+                <br>
+                p.s i love you
+            </p>
+            <button onclick="closeCard()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
